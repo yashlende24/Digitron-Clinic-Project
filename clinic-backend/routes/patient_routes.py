@@ -24,7 +24,7 @@ def register_patient_routes(app):
 
         # ✅ INSERT ONLY IF NOT DUPLICATE
         cursor.execute(
-            "INSERT INTO patient (patientName, age, gender, contactNumber) VALUES (?, ?, ?, ?)",
+            "INSERT INTO patient (patientName, age, gender, contactNumber) VALUES (?, ?, ?, ?) ",
             (data["patientName"], data["age"], data["gender"], data["contactNumber"])
         )
 
