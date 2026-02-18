@@ -10,7 +10,7 @@ register_patient_routes(app)
 
 @app.route("/")
 def home():
-    return {"message": "Backend is running on port"}
+    return {"message": "Backend is running on port "}
 
 if __name__ == "__main__":
     app.run(debug=True)
