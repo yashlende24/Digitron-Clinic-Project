@@ -19,7 +19,7 @@ def register_patient_routes(app):
         if existing_patient:
             conn.close()
             return jsonify({
-                "error": "Patient with this contact number is already registered or not"
+                "error": "Patient with this contact number is already registered or not hell yash"
             }), 400
 
         # ✅ INSERT ONLY IF NOT DUPLICATE
