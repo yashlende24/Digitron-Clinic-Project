@@ -12,14 +12,14 @@ def register_patient_routes(app):
 
         # 🔍 CHECK FOR DUPLICATE PATIENT (BY CONTACT NUMBER)
         existing_patient = cursor.execute(
-            "SELECT id FROM patient WHERE contactNumber = ?",
+            "SELECT id FROM patient WHERE        contactNumber = ?    ",
             (data["contactNumber"],)
         ).fetchone()
 
         if existing_patient:
             conn.close()
             return jsonify({
-                "error": "Patient with this contact number is already registered "
+                "error": "Patient with this contact number is already registered or not hell yash"
             }), 400
 
         # ✅ INSERT ONLY IF NOT DUPLICATE
