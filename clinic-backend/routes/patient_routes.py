@@ -12,7 +12,7 @@ def register_patient_routes(app):
 
         # 🔍 CHECK FOR DUPLICATE PATIENT (BY CONTACT NUMBER)
         existing_patient = cursor.execute(
-            "SELECT id FROM patient WHERE contactNumber = ?",
+            "SELECT id FROM patient WHERE contactNumber = ?    ",
             (data["contactNumber"],)
         ).fetchone()
 
